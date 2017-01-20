@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class AbstractBAMFileIndexTest {
+public class AbstractBAMFileIndexTest extends org.scalatest.testng.TestNGSuite {
 
     /**
      * @see <a href="https://github.com/samtools/htsjdk/issues/73">https://github.com/samtools/htsjdk/issues/73</a>

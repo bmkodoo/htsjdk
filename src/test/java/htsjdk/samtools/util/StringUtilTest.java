@@ -23,6 +23,7 @@
  */
 package htsjdk.samtools.util;
 
+import htsjdk.HtsjdkTest;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -30,7 +31,7 @@ import org.testng.annotations.Test;
 /**
  * @author alecw@broadinstitute.org
  */
-public class StringUtilTest {
+public class StringUtilTest extends HtsjdkTest {
     @Test(dataProvider = "provider")
     public void testSplit(final String input, final String[] expectedResult, final boolean concatenateExcess) {
         String[] ret = new String[expectedResult.length];

@@ -7,12 +7,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import htsjdk.HtsjdkTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import htsjdk.samtools.seekablestream.SeekableFileStream;
 
-public class BlockCompressedInputStreamTest {
+public class BlockCompressedInputStreamTest extends HtsjdkTest {
 	// random data pulled from /dev/random then compressed using bgzip from tabix
 	private static final File BLOCK_UNCOMPRESSED = new File("src/test/resources/htsjdk/samtools/util/random.bin");
 	private static final File BLOCK_COMPRESSED = new File("src/test/resources/htsjdk/samtools/util/random.bin.gz");

@@ -1,5 +1,6 @@
 package htsjdk.samtools;
 
+import htsjdk.HtsjdkTest;
 import htsjdk.samtools.cram.common.CramVersions;
 import htsjdk.samtools.cram.ref.ReferenceSource;
 import htsjdk.samtools.seekablestream.SeekableStream;
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * Created by vadim on 28/04/2015.
  */
-public class CRAMComplianceTest {
+public class CRAMComplianceTest extends HtsjdkTest {
 
     @DataProvider(name = "test1")
     public Object[][] createData1() {

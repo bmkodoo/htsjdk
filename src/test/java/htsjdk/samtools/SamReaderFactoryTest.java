@@ -1,5 +1,6 @@
 package htsjdk.samtools;
 
+import htsjdk.HtsjdkTest;
 import htsjdk.samtools.cram.ref.ReferenceSource;
 import htsjdk.samtools.seekablestream.ISeekableStreamFactory;
 import htsjdk.samtools.seekablestream.SeekableFileStream;
@@ -28,7 +29,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.BiFunction;
 
-public class SamReaderFactoryTest {
+public class SamReaderFactoryTest extends HtsjdkTest {
     private static final File TEST_DATA_DIR = new File("src/test/resources/htsjdk/samtools");
 
     private static final Log LOG = Log.getInstance(SamReaderFactoryTest.class);

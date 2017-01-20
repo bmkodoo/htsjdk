@@ -23,12 +23,13 @@
  */
 package htsjdk.samtools;
 
+import htsjdk.HtsjdkTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class SAMUtilsTest {
+public class SAMUtilsTest extends HtsjdkTest {
     @Test
     public void testCompareMapqs() {
         Assert.assertEquals(SAMUtils.compareMapqs(0, 0), 0);

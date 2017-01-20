@@ -24,6 +24,7 @@ package htsjdk.samtools;
  * THE SOFTWARE.
  */
 
+import htsjdk.HtsjdkTest;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -35,7 +36,7 @@ import java.io.File;
  *
  * @author ktibbett@broadinstitute.org
  */
-public class SamReaderSortTest {
+public class SamReaderSortTest extends HtsjdkTest {
 
     public static final String COORDINATE_SORTED_FILE = "src/test/resources/htsjdk/samtools/coordinate_sorted.sam";
     public static final String QUERYNAME_SORTED_FILE = "src/test/resources/htsjdk/samtools/queryname_sorted.sam";

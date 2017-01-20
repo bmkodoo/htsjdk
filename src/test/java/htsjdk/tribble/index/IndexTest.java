@@ -1,13 +1,11 @@
 package htsjdk.tribble.index;
 
-import htsjdk.samtools.util.IOUtil;
+import htsjdk.HtsjdkTest;
 import htsjdk.tribble.FeatureCodec;
 import htsjdk.tribble.TestUtils;
 import htsjdk.tribble.Tribble;
 import htsjdk.tribble.bed.BEDCodec;
 import htsjdk.tribble.index.linear.LinearIndex;
-import htsjdk.tribble.index.tabix.TabixFormat;
-import htsjdk.tribble.index.tabix.TabixIndex;
 import htsjdk.tribble.util.LittleEndianOutputStream;
 import htsjdk.tribble.util.TabixUtils;
 import htsjdk.variant.vcf.VCFCodec;
@@ -22,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class IndexTest {
+public class IndexTest extends HtsjdkTest {
     private final static String CHR = "1";
     private final static File MassiveIndexFile = new File(TestUtils.DATA_DIR + "Tb.vcf.idx");
 
