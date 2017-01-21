@@ -1,4 +1,5 @@
-import org.scalatest.testng.TestNGSuiteLike
+package htsjdk
+
 import org.scalatest.{FlatSpec, Matchers}
 
 /** Base class for all Scala tests. */
