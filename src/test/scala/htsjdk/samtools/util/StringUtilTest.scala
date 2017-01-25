@@ -1,9 +1,32 @@
+/*
+ * The MIT License
+ *
+ * Copyright (c) 2017 The Broad Institute
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 package htsjdk.samtools.util
 
 import htsjdk.UnitSpec
 
 class StringUtilTest extends UnitSpec {
-  "StringUtil.split" should "should behave like String.split(char)" in {
+  "StringUtil.split" should "behave like String.split(char)" in {
     Seq("A:BB:C", "A:BB", "A:BB:", "A:BB:C:DDD", "A:", "A", "A:BB:C").foreach { s =>
       val arr = new Array[String](10)
       val count = StringUtil.split(s, arr, ':')
@@ -29,7 +52,7 @@ class StringUtilTest extends UnitSpec {
   }
 
   Seq(("ATAC", "GCAT", 3), ("ATAGC", "ATAGC", 0)).foreach { case (s1, s2, distance) =>
-      it should s"return distance ${0} between $s1 and $s2" in {
+      it should s"return distance $distance between $s1 and $s2" in {
         StringUtil.hammingDistance(s1, s2) shouldBe distance
       }
   }
@@ -100,12 +123,12 @@ class StringUtilTest extends UnitSpec {
   }
 
   "StringUtil.intValuesToString(int[])" should "generate a CSV string of ints" in {
-    val ints = Array[Int](1,2,3,11,22,33,Int.MinValue, 0, Int.MaxValue)
+    val ints = Array[Int](1, 2, 3, 11, 22, 33, Int.MinValue, 0, Int.MaxValue)
     StringUtil.intValuesToString(ints) shouldBe ints.mkString(", ")
   }
 
   "StringUtil.intValuesToString(short[])" should "generate a CSV string of ints" in {
-    val ints = Array[Short](1,2,3,11,22,33,Short.MinValue, 0, Short.MaxValue)
+    val ints = Array[Short](1, 2, 3, 11, 22, 33, Short.MinValue, 0, Short.MaxValue)
     StringUtil.intValuesToString(ints) shouldBe ints.mkString(", ")
   }
 }
